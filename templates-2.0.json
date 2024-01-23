@@ -1300,6 +1300,40 @@
       "note": "More information about the <a href=\"https://www.opc-router.com/terms-of-use-and-eula/?utm_source=DockerHub_runtime&utm_medium=click&utm_campaign=TermsOfUseAndEula\" target=\"_blank\">EULA</a>.",
       "stackfile": "https://raw.githubusercontent.com/portainer/templates/master/edge/opc-router/docker-compose.yml"
     },
+
+
+ {
+      "categories": [
+        "Tools",
+        "Authentication"
+      ],
+      "description": "An open-source authentication and authorization server providing 2-factor authentication and single sign-on (SSO) for your applications via a web portal.",
+      "env": [
+        {
+          "label": "TZ",
+          "name": "TZ"
+        }
+      ],
+      "image": "authelia/authelia:latest",
+      "logo": "https://raw.githubusercontent.com/xneo1/portainer_templates/master/Images/authelia.png",
+      "name": "authelia",
+      "note": "Requires a configuration.yml file in order to work. Documentation is available <a href='https://docs.authelia.com/deployment/deployment-ha'>here</a>.",
+      "platform": "linux",
+      "ports": [
+        "9091:9091/tcp"
+      ],
+      "restart_policy": "unless-stopped",
+      "title": "Authelia",
+      "type": 1,
+      "volumes": [
+        {
+          "bind": "/portainer/Files/AppData/Config/Authelia",
+          "container": "/etc/authelia/"
+        }
+      ]
+    },
+
+	  
     {
       "type": 4,
       "title": "Pro Mosquitto with Management Center",
