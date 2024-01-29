@@ -912,7 +912,7 @@
       }
     },
     {
-      "type": 2,
+      "type": 4,
       "title": "OpenFaaS",
       "name": "func",
       "description": "Serverless functions made simple",
